@@ -29,7 +29,6 @@ function SearchBar() {
     return (
         <div>
             <h2 className="title">Movie title</h2>
-            {console.log(movie)}
             <input 
                 type="text" 
                 onChange={handleChange}
