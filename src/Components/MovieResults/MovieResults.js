@@ -43,8 +43,6 @@ function MovieResults() {
                 : 
                 null}
             </p>
-            {/* TODO Display nominees in new component*/}
-            {console.log(state.nominees)}
         </div>
     )
 }
