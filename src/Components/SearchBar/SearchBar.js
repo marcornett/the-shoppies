@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import {useStateValue} from '../../ContextAPI/StateProvider'
+import { useStateValue } from '../../ContextAPI/StateProvider'
 import { ADD_MOVIE_DATA } from '../../ContextAPI/reducer'
 import './SearchBar.css'
 
