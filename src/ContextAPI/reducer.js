@@ -1,7 +1,9 @@
 export const ADD_MOVIE_DATA = 'ADD_MOVIE_DATA'
 export const ADD_NOMINEE = 'ADD_NOMINEE'
+export const REMOVE_NOMINEE = 'REMOVE_NOMINEE'
+
 export const intialState = {
-    movieData: {},
+    movieData: [],
     searchTerm: '',
     nominees: [],
 }
@@ -18,6 +20,13 @@ export default function reducer(state = intialState, action){
                 return{
                     ...state,
                     nominees: [...state.nominees, action.payload]
+                }
+        case REMOVE_NOMINEE:
+            let newNominees = state.nominees.filter(
+                (nominee) => nominee !== action.payload)
+                return{
+                    ...state,
+                    nominees: newNominees
                 }
         default:
             return state

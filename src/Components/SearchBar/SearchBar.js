@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import {useStateValue} from '../../ContextAPI/StateProvider'
+import { useStateValue } from '../../ContextAPI/StateProvider'
 import { ADD_MOVIE_DATA } from '../../ContextAPI/reducer'
 import './SearchBar.css'
 
 function SearchBar() {
     const [value, setValue] = useState('')
-    const [movie, setMovie] = useState({})
     const [,dispatch] = useStateValue()
 
     useEffect(()=>{
@@ -15,9 +14,8 @@ function SearchBar() {
             let searchTerm = value.trim().replaceAll(pattern, '+')
             try{
                 const response = await axios.get(
-                    `http://www.omdbapi.com/?t=${searchTerm}&apikey=${process.env.REACT_APP_API_KEY}`
+                    `http://www.omdbapi.com/?page=1&s=${searchTerm}&apikey=${process.env.REACT_APP_API_KEY}`
                     )
-                setMovie(response.data)
                 dispatch({
                     type: ADD_MOVIE_DATA,
                     payload: response.data,
