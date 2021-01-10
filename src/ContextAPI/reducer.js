@@ -3,7 +3,7 @@ export const ADD_NOMINEE = 'ADD_NOMINEE'
 export const REMOVE_NOMINEE = 'REMOVE_NOMINEE'
 
 export const intialState = {
-    movieData: {},
+    movieData: [],
     searchTerm: '',
     nominees: [],
 }
