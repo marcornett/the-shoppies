@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/the-shopies-deploy/marcornett/static/css/main.dd023525.chunk.css",
-    "main.js": "/the-shopies-deploy/marcornett/static/js/main.0168a6de.chunk.js",
-    "runtime-main.js": "/the-shopies-deploy/marcornett/static/js/runtime-main.ef387d20.js",
-    "static/js/2.0a7b7756.chunk.js": "/the-shopies-deploy/marcornett/static/js/2.0a7b7756.chunk.js",
-    "static/js/3.f63161c9.chunk.js": "/the-shopies-deploy/marcornett/static/js/3.f63161c9.chunk.js",
-    "index.html": "/the-shopies-deploy/marcornett/index.html",
-    "static/js/2.0a7b7756.chunk.js.LICENSE.txt": "/the-shopies-deploy/marcornett/static/js/2.0a7b7756.chunk.js.LICENSE.txt"
+    "main.css": "/the-shopies-deploy/static/css/main.dd023525.chunk.css",
+    "main.js": "/the-shopies-deploy/static/js/main.0168a6de.chunk.js",
+    "runtime-main.js": "/the-shopies-deploy/static/js/runtime-main.64ed2151.js",
+    "static/js/2.0a7b7756.chunk.js": "/the-shopies-deploy/static/js/2.0a7b7756.chunk.js",
+    "static/js/3.f63161c9.chunk.js": "/the-shopies-deploy/static/js/3.f63161c9.chunk.js",
+    "index.html": "/the-shopies-deploy/index.html",
+    "static/js/2.0a7b7756.chunk.js.LICENSE.txt": "/the-shopies-deploy/static/js/2.0a7b7756.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef387d20.js",
+    "static/js/runtime-main.64ed2151.js",
     "static/js/2.0a7b7756.chunk.js",
     "static/css/main.dd023525.chunk.css",
     "static/js/main.0168a6de.chunk.js"
