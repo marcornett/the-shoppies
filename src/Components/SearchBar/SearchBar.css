@@ -1,0 +1,39 @@
+.search_comp{
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.input_bar{
+    width: 100%;
+    border: 2px solid #e1e1e1;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    padding-left: 35px;
+}
+
+.input_bar:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 4px 0 dodgerblue;
+}
+
+.search_icon{
+    position: relative;
+}
+
+.search_icon i{
+    position: absolute;
+    left: 0;
+    top: 18;
+    padding: 9px 8px;
+    color: #bbbbbb;
+}
+
+.search_icon input[type="text"]:focus + i{
+    color: dodgerblue;
+}

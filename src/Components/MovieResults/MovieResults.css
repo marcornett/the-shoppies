@@ -1,0 +1,40 @@
+.movie_results{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 20px;
+}
+
+.search_results{
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+    height: 100%;
+}
+
+.nominees{
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+    height: 100%;
+}
+
+ul{
+    padding: 15px 0px 0px 30px;
+}
+
+li{
+    padding: 5px 0px 5px 0px;
+}
+
+button{
+    border: 2px solid #e1e1e1;
+    border-radius: 4px;
+    outline: none;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+p{
+    margin-top: 10px;
+}

@@ -6,7 +6,7 @@ import './MovieResults.css'
 
 function MovieResults() {
     const [state, dispatch] = useStateValue()
-    const [alertMessage, setAlertMessage] = useState([])
+    const [alertMessage, setAlertMessage] = useState('')
 
     const handleNominate = (e, title) =>{
         setAlertMessage('')
@@ -17,10 +17,10 @@ function MovieResults() {
                     payload: title
                 })
             } else{
-                setAlertMessage('Only 5 movies can be nominated')
+                setAlertMessage('*Only 5 movies can be nominated')
             }
         } else{
-            setAlertMessage('Movie already nominated')
+            setAlertMessage('*Movie already nominated')
         }
     }
 
@@ -32,15 +32,20 @@ function MovieResults() {
     }
 
     return (
-        <div>
+        <div className="movie_results">
             <div className="search_results">
                 <h2>Results for {state.searchTerm}</h2>
                 <ul>
-                    {state.movieData?.Search?.map((movie, i) => 
-                        <li key={i}>
-                            <span>{movie.Title}, {movie.Year} </span>
-                            <input type="submit" onClick={(e) => handleNominate(e, movie.Title)} value="Nominate"/>
-                        </li>
+                    {state.movieData?.map((movie, i) => 
+                            <li key={i}>
+                                <span>{movie.Title}, {movie.Year} </span>
+                                <br/>
+                                <button 
+                                    type="submit" 
+                                    onClick={(e) => handleNominate(e, movie.Title)}>
+                                    Nominate
+                                </button>
+                            </li>
                     )}
                 </ul>
                 <p>
@@ -48,7 +53,7 @@ function MovieResults() {
                 </p>
                 <p>
                     {state.nominees.length === 5 ? 
-                    "Your movie nominations have been added!" 
+                    "*Your movie nominations have been added!" 
                     : 
                     null}
                 </p>
@@ -56,10 +61,15 @@ function MovieResults() {
             <div className="nominees">
                 <h2>Nominees</h2>
                 {state.nominees?.map((nominee, i) => 
-                    <div key={i}>
-                        {nominee}
-                        <button onClick={(e) => handleRemove(e, nominee)}>x</button>
-                    </div>
+                    <ul key={i}>
+                        <li>
+                            {nominee}
+                            <br/>
+                            <button onClick={(e) => handleRemove(e, nominee)}>
+                                Remove
+                            </button>
+                        </li>
+                    </ul>
                 )}
             </div>
         </div>
